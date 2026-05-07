@@ -71,35 +71,37 @@
   },
 
   "admin": {
-    "title": "Infrastructure Health Prediction",
-    "referenceTitle": "Health Status Reference",
-    "systemMetrics": "Current System Metrics",
-    "predictBtn": "Predict Infrastructure Health",
-    "analyzing": "Analyzing...",
-    "predictedStatus": "Predicted Status",
-    "classes": {
-      "Healthy": {
-        "label": "Healthy",
-        "meaning": "System normal / No issues"
-      },
-      "Slightly_Degraded": {
-        "label": "Slightly Degraded",
-        "meaning": "Small performance drop"
-      },
-      "Moderate_Load": {
-        "label": "Moderate Load",
-        "meaning": "System under load"
-      },
-      "High_Stress": {
-        "label": "High Stress",
-        "meaning": "High risk condition"
-      },
-      "Critical_Failure": {
-        "label": "Critical Failure",
-        "meaning": "System near crash"
-      }
+    "title": "ML Control Center",
+    "heroActive": "AI Prediction Engine Active",
+    "tabs": {
+      "infra": "Server Infrastructure ML",
+      "lora": "LoRa Multi-Hop ML"
     },
-    "features": {
+    "referenceTitleInfra": "Server Health Categories",
+    "referenceTitleLora": "Network Bottleneck Logic",
+    "systemMetricsInfra": "Live System Metrics",
+    "systemMetricsLora": "Simulate Node Payload",
+    "systemMetricsDesc": "Enter the real-time telemetry data to generate an AI prediction.",
+    "predictBtn": "Run AI Assessment",
+    "analyzing": "Processing Telemetry...",
+    "diagnosticError": "Diagnostic Error",
+    "diagnosticResult": "AI Diagnostic Result",
+    "systemAction": "System Action",
+    "infraClasses": {
+      "Healthy": { "label": "Healthy", "meaning": "System normal / No issues" },
+      "Slightly_Degraded": { "label": "Slightly Degraded", "meaning": "Small performance drop" },
+      "Moderate_Load": { "label": "Moderate Load", "meaning": "System under load" },
+      "High_Stress": { "label": "High Stress", "meaning": "High risk condition" },
+      "Critical_Failure": { "label": "Critical Failure", "meaning": "System near crash" }
+    },
+    "loraClasses": {
+      "Excellent": { "label": "Excellent", "meaning": "Perfect transmission" },
+      "Good": { "label": "Good", "meaning": "Highly reliable" },
+      "Moderate": { "label": "Moderate", "meaning": "Signal degrading" },
+      "Bad": { "label": "Bad", "meaning": "High packet loss risk" },
+      "Unusable": { "label": "Unusable", "meaning": "Network failed / Bottlenecked" }
+    },
+    "infraFeatures": {
       "cpu_usage": "CPU Usage (%)",
       "memory_usage": "Memory Usage (%)",
       "disk_usage": "Disk Usage (%)",
@@ -108,6 +110,20 @@
       "active_connections": "Active Connections",
       "error_count": "Error Count",
       "latency": "Latency (ms)"
+    },
+    "loraFeatures": {
+      "rssi_a": "Hop A: RSSI (dBm)",
+      "snr_a": "Hop A: SNR (dB)",
+      "loss_a": "Hop A: Loss (%)",
+      "rssi_b": "Hop B: RSSI (dBm)",
+      "snr_b": "Hop B: SNR (dB)",
+      "loss_b": "Hop B: Loss (%)",
+      "rssi_c": "Hop C: RSSI (dBm)",
+      "snr_c": "Hop C: SNR (dB)",
+      "loss_c": "Hop C: Loss (%)",
+      "rssi_d": "Hop D: RSSI (dBm)",
+      "snr_d": "Hop D: SNR (dB)",
+      "loss_d": "Hop D: Loss (%)"
     },
     "invalidInput": "Please enter valid numbers for all fields"
   },
