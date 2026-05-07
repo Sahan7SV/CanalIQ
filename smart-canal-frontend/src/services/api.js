@@ -10,7 +10,7 @@ export const fetchNodeById = (id) => {
 export const fetchSeasonData = () => Promise.resolve(seasonData)
 
 export const runMLPrediction = (nodeId) => {
-  // Simulate Random Forest prediction
+  // Simulate Random Forest prediction for existing canal features
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
@@ -22,16 +22,21 @@ export const runMLPrediction = (nodeId) => {
   })
 }
 
-// ---------- REAL ML API CALL ----------
+// ---------- REAL ML API CALL TO FASTAPI ----------
 export const predictInfrastructureHealth = async (inputData) => {
-  const response = await fetch('http://127.0.0.1:5000/predict', {
+  // 1. Point to port 8000 (FastAPI's default port)
+  const response = await fetch('http://127.0.0.1:8000/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(inputData),
   })
+  
   if (!response.ok) {
     const error = await response.json()
-    throw new Error(error.error || 'Prediction failed')
+    // 2. FastAPI returns errors in a "detail" array/string, unlike Express which usually uses "error"
+    throw new Error(error.detail || 'Prediction failed. Is the Python server running?')
   }
+  
+  // 3. Returns the clean JSON: { "status": "success", "network_health": "Excellent" }
   return response.json()
 }
