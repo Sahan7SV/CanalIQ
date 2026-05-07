@@ -1,0 +1,123 @@
+{
+  "appName": "කැනල් IQ",
+  "tagline": "ස්මාර්ට් වාරිමාර්ග නිරීක්ෂණ පද්ධතිය",
+  "login": "පිවිසෙන්න",
+  "signingIn": "පිවිසෙමින්...",
+  "username": "පරිශීලක නාමය",
+  "password": "මුරපදය",
+  "invalidCredentials": "වලංගු නොවන පරිශීලක නාමය හෝ මුරපදය",
+  "demoCredentials": "ආදර්ශ පිවිසුම් දත්ත",
+  "demoAdmin": "admin / admin123",
+  "demoUser": "user / user123",
+
+  "navigation": {
+    "dashboard": "මුල් පිටුව",
+    "canalMap": "ඇළ සිතියම",
+    "seasonAnalysis": "වාර විශ්ලේෂණය",
+    "reports": "වාර්තා",
+    "mlPredictions": "ML පුර්ව අනුමාන"
+  },
+
+  "topbar": {
+    "systemName": "ඇළ නිරීක්ෂණ පද්ධතිය"
+  },
+
+  "dashboard": {
+    "title": "මුල් පිටුව",
+    "healthyNodes": "සෞඛ්‍යමත් නෝඩ්",
+    "warningNodes": "අවවාද නෝඩ්",
+    "criticalNodes": "අවදානම් නෝඩ්",
+    "latestReadings": "නවතම මිනුම්"
+  },
+
+  "map": {
+    "title": "ඇළ සිතියම"
+  },
+
+  "node": {
+    "chi": "CHI",
+    "cwqi": "CWQI",
+    "status": "තත්ත්වය",
+    "turbidity": "කැලඹුම",
+    "waterFlow": "ජල ප්‍රවාහය",
+    "ultrasonic": "අතිධ්වනි",
+    "ph": "pH අගය",
+    "temperature": "උෂ්ණත්වය",
+    "tds": "TDS",
+    "ppm": "ppm"
+  },
+
+  "status": {
+    "healthy": "සෞඛ්‍යමත්",
+    "warning": "අවවාද",
+    "critical": "අවදානම්"
+  },
+
+  "season": {
+    "title": "වාර විශ්ලේෂණය: යල සහ මහ",
+    "chiByMonth": "මාසික සාමාන්‍ය CHI",
+    "cwqiByMonth": "මාසික සාමාන්‍ය CWQI",
+    "insightTitle": "ජල සම්පාදන තොරතුරු",
+    "insightText": "සාමාන්‍ය ශ්‍රී ලාංකීය වාර: යල (මැයි–අගෝස්තු) වියළි වන අතර එමඟින් CHI හා CWQI අඩු වේ; මහ (සැප්තැම්බර්–මාර්තු) මෝසම් වැසි ගෙනෙයි, ජලයේ ගුණාත්මකභාවය හා ගලායාම වැඩි දියුණු කරයි. මෙම විශ්ලේෂණය ජල බෙදාහැරීම හා නඩත්තු කාලසටහන් සැලසුම් කිරීමට උපකාරී වේ."
+  },
+
+  "report": {
+    "title": "වාර්තා",
+    "description": "ජල සම්පාදන කාර්ය සාධන වාර්තා (CHI, CWQI, සංවේදක දත්ත) PDF ලෙස උත්පාදනය කරන්න.",
+    "generateBtn": "වාර්තාව උත්පාදනය කරන්න (Backend අවශ්‍යයි)",
+    "previewTitle": "ආදර්ශ වාර්තා පෙරදසුන",
+    "node": "නෝඩය",
+    "noData": "දත්ත නොමැත"
+  },
+
+  "admin": {
+    "title": "යටිතල පහසුකම් සෞඛ්‍ය පුර්ව අනුමානය",
+    "referenceTitle": "සෞඛ්‍ය තත්ව යොමුව",
+    "systemMetrics": "වත්මන් පද්ධති මිනුම්",
+    "predictBtn": "යටිතල සෞඛ්‍ය පුරෝකථනය කරන්න",
+    "analyzing": "විශ්ලේෂණය කරමින්...",
+    "predictedStatus": "පුරෝකථිත තත්ත්වය",
+    "classes": {
+      "Healthy": {
+        "label": "සෞඛ්‍යමත්",
+        "meaning": "පද්ධතිය සාමාන්‍ය / ගැටළු නොමැත"
+      },
+      "Slightly_Degraded": {
+        "label": "සුළු පිරිහීම",
+        "meaning": "කුඩා කාර්ය සාධන පහත වැටීමක්"
+      },
+      "Moderate_Load": {
+        "label": "මධ්‍යම බර පැටවීම",
+        "meaning": "පද්ධතිය බර යටතේ"
+      },
+      "High_Stress": {
+        "label": "අධික ආතතිය",
+        "meaning": "ඉහළ අවදානම් තත්වයක්"
+      },
+      "Critical_Failure": {
+        "label": "බරපතල අසමත්වීම",
+        "meaning": "පද්ධතිය ඇඳ වැටීමට ආසන්නයි"
+      }
+    },
+    "features": {
+      "cpu_usage": "CPU භාවිතය (%)",
+      "memory_usage": "මතක භාවිතය (%)",
+      "disk_usage": "තැටි භාවිතය (%)",
+      "load_average": "පැටවුම් සාමාන්‍යය",
+      "query_response_time": "ප්‍රශ්න ප්‍රතිචාර කාලය (ms)",
+      "active_connections": "සක්‍රිය සම්බන්ධතා",
+      "error_count": "දෝෂ ගණන",
+      "latency": "ප්‍රමාදය (ms)"
+    },
+    "invalidInput": "කරුණාකර සියලු ක්ෂේත්‍ර සඳහා වලංගු අංක ඇතුළත් කරන්න"
+  },
+
+  "notFound": "404 – පිටුව හමු නොවීය",
+
+  "seasonLabels": {
+    "month": "මාසය",
+    "chi": "CHI",
+    "cwqi": "CWQI",
+    "waterFlow": "ජල ප්‍රවාහය"
+  }
+}

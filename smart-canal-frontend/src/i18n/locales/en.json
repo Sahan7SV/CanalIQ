@@ -1,0 +1,123 @@
+{
+  "appName": "CanalIQ",
+  "tagline": "Smart Irrigation Monitoring System",
+  "login": "Sign In",
+  "signingIn": "Signing in...",
+  "username": "Username",
+  "password": "Password",
+  "invalidCredentials": "Invalid username or password",
+  "demoCredentials": "Demo credentials",
+  "demoAdmin": "admin / admin123",
+  "demoUser": "user / user123",
+
+  "navigation": {
+    "dashboard": "Dashboard",
+    "canalMap": "Canal Map",
+    "seasonAnalysis": "Season Analysis",
+    "reports": "Reports",
+    "mlPredictions": "ML Predictions"
+  },
+
+  "topbar": {
+    "systemName": "Canal Monitoring System"
+  },
+
+  "dashboard": {
+    "title": "Dashboard",
+    "healthyNodes": "Healthy Nodes",
+    "warningNodes": "Warning Nodes",
+    "criticalNodes": "Critical Nodes",
+    "latestReadings": "Latest Node Readings"
+  },
+
+  "map": {
+    "title": "Canal Map"
+  },
+
+  "node": {
+    "chi": "CHI",
+    "cwqi": "CWQI",
+    "status": "Status",
+    "turbidity": "Turbidity",
+    "waterFlow": "Water Flow",
+    "ultrasonic": "Ultrasonic",
+    "ph": "pH",
+    "temperature": "Temperature",
+    "tds": "TDS",
+    "ppm": "ppm"
+  },
+
+  "status": {
+    "healthy": "Healthy",
+    "warning": "Warning",
+    "critical": "Critical"
+  },
+
+  "season": {
+    "title": "Seasonal Analysis: Yala vs Maha",
+    "chiByMonth": "Average CHI by Month & Season",
+    "cwqiByMonth": "Average CWQI by Month & Season",
+    "insightTitle": "Irrigation Insight",
+    "insightText": "Typical Sri Lankan seasons: Yala (May–August) is drier, resulting in lower CHI and CWQI; Maha (September–March) brings monsoon rains, improving water quality and flow. This analysis helps plan water distribution and maintenance schedules."
+  },
+
+  "report": {
+    "title": "Reports",
+    "description": "Generate irrigation performance reports (CHI, CWQI, sensor data) as PDF.",
+    "generateBtn": "Generate Report (Backend required)",
+    "previewTitle": "Sample Report Preview",
+    "node": "Node",
+    "noData": "No data available"
+  },
+
+  "admin": {
+    "title": "Infrastructure Health Prediction",
+    "referenceTitle": "Health Status Reference",
+    "systemMetrics": "Current System Metrics",
+    "predictBtn": "Predict Infrastructure Health",
+    "analyzing": "Analyzing...",
+    "predictedStatus": "Predicted Status",
+    "classes": {
+      "Healthy": {
+        "label": "Healthy",
+        "meaning": "System normal / No issues"
+      },
+      "Slightly_Degraded": {
+        "label": "Slightly Degraded",
+        "meaning": "Small performance drop"
+      },
+      "Moderate_Load": {
+        "label": "Moderate Load",
+        "meaning": "System under load"
+      },
+      "High_Stress": {
+        "label": "High Stress",
+        "meaning": "High risk condition"
+      },
+      "Critical_Failure": {
+        "label": "Critical Failure",
+        "meaning": "System near crash"
+      }
+    },
+    "features": {
+      "cpu_usage": "CPU Usage (%)",
+      "memory_usage": "Memory Usage (%)",
+      "disk_usage": "Disk Usage (%)",
+      "load_average": "Load Average",
+      "query_response_time": "Query Response (ms)",
+      "active_connections": "Active Connections",
+      "error_count": "Error Count",
+      "latency": "Latency (ms)"
+    },
+    "invalidInput": "Please enter valid numbers for all fields"
+  },
+
+  "notFound": "404 – Page Not Found",
+
+  "seasonLabels": {
+    "month": "Month",
+    "chi": "CHI",
+    "cwqi": "CWQI",
+    "waterFlow": "Water Flow"
+  }
+}
