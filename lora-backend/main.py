@@ -7,10 +7,9 @@ import pandas as pd
 # 1. Initialize the FastAPI application
 app = FastAPI(title="LoRa Network ML API", description="Predicts multi-hop network health")
 
-# --- NEW: Enable CORS so React can communicate with FastAPI ---
+# Enable CORS so React can communicate with FastAPI
 app.add_middleware(
     CORSMiddleware,
-    # Allow local React development servers (Vite uses 5173, Create React App uses 3000)
     allow_origins=["http://localhost:5173", "http://127.0.0.1:5173", "http://localhost:3000", "http://127.0.0.1:3000"],
     allow_credentials=True,
     allow_methods=["*"],
@@ -20,9 +19,9 @@ app.add_middleware(
 # 2. Load the trained Machine Learning model
 try:
     model = joblib.load("lora_network_classifier.joblib")
-    print("✅ ML Model loaded successfully!")
+    print("✅ LoRa ML Model loaded successfully!")
 except Exception as e:
-    print(f"❌ Error loading model: {e}")
+    print(f"❌ Error loading LoRa model: {e}")
 
 # 3. Define the strict data structure
 class LoRaPayload(BaseModel):
@@ -39,8 +38,8 @@ class LoRaPayload(BaseModel):
     SNR_D: float
     Loss_D: float
 
-# 4. Create the API Endpoint
-@app.post("/predict")
+# 4. UPDATED: Changed endpoint to /predict_lora
+@app.post("/predict_lora")
 def predict_network_status(data: LoRaPayload):
     try:
         input_dict = data.dict()
@@ -56,4 +55,4 @@ def predict_network_status(data: LoRaPayload):
 
 @app.get("/")
 def read_root():
-    return {"message": "LoRa Backend API is running!"}
+    return {"message": "LoRa Backend API is running on Port 8000!"}

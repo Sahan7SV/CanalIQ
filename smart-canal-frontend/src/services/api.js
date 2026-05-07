@@ -10,7 +10,7 @@ export const fetchNodeById = (id) => {
 export const fetchSeasonData = () => Promise.resolve(seasonData)
 
 export const runMLPrediction = (nodeId) => {
-  // Simulate Random Forest prediction for existing canal features
+  // Simulate Random Forest prediction for canal nodes
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
@@ -22,10 +22,12 @@ export const runMLPrediction = (nodeId) => {
   })
 }
 
-// ---------- REAL ML API CALL TO FASTAPI ----------
+// ==========================================
+// REAL ML API CALL 1: SERVER INFRASTRUCTURE
+// ==========================================
 export const predictInfrastructureHealth = async (inputData) => {
-  // 1. Point to port 8000 (FastAPI's default port)
-  const response = await fetch('http://127.0.0.1:8000/predict', {
+  // ⚠️ CRITICAL: Pointing to Port 5000 for the Flask Server
+  const response = await fetch('http://127.0.0.1:5000/predict_infra', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(inputData),
@@ -33,10 +35,25 @@ export const predictInfrastructureHealth = async (inputData) => {
   
   if (!response.ok) {
     const error = await response.json()
-    // 2. FastAPI returns errors in a "detail" array/string, unlike Express which usually uses "error"
-    throw new Error(error.detail || 'Prediction failed. Is the Python server running?')
+    throw new Error(error.detail || 'Server Infra Prediction failed. Check backend.')
   }
+  return response.json()
+}
+
+// ==========================================
+// REAL ML API CALL 2: LORA MULTI-HOP
+// ==========================================
+export const predictLoraHealth = async (inputData) => {
+  // ⚠️ CRITICAL: Pointing to Port 8000 for the FastAPI Server
+  const response = await fetch('http://127.0.0.1:8000/predict_lora', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(inputData),
+  })
   
-  // 3. Returns the clean JSON: { "status": "success", "network_health": "Excellent" }
+  if (!response.ok) {
+    const error = await response.json()
+    throw new Error(error.detail || 'LoRa Prediction failed. Check backend.')
+  }
   return response.json()
 }

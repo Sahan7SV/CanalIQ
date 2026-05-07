@@ -71,22 +71,22 @@
   },
 
   "admin": {
-    "title": "ML Control Center",
+    "title": "Machine Learning Prediction",
     "heroActive": "AI Prediction Engine Active",
     "tabs": {
-      "infra": "Server Infrastructure ML",
+      "infra": "System Infrastructure Health ML",
       "lora": "LoRa Multi-Hop ML"
     },
-    "referenceTitleInfra": "Server Health Categories",
-    "referenceTitleLora": "Network Bottleneck Logic",
-    "systemMetricsInfra": "Live System Metrics",
-    "systemMetricsLora": "Simulate Node Payload",
-    "systemMetricsDesc": "Enter the real-time telemetry data to generate an AI prediction.",
-    "predictBtn": "Run AI Assessment",
-    "analyzing": "Processing Telemetry...",
+    "referenceTitleInfra": "System Health Categories",
+    "referenceTitleLora": "LoRa Link Quality Reference",
+    "systemMetricsInfra": "System Infrastructure Metrics",
+    "systemMetricsLora": "LoRa Signal Metrics",
+    "systemMetricsDesc": "Enter current readings to diagnose system health.",
+    "predictBtn": "Run Diagnosis",
+    "analyzing": "Analyzing...",
     "diagnosticError": "Diagnostic Error",
-    "diagnosticResult": "AI Diagnostic Result",
-    "systemAction": "System Action",
+    "diagnosticResult": "Diagnosis",
+    "systemAction": "What this means",
     "infraClasses": {
       "Healthy": { "label": "Healthy", "meaning": "System normal / No issues" },
       "Slightly_Degraded": { "label": "Slightly Degraded", "meaning": "Small performance drop" },

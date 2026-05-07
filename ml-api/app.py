@@ -14,15 +14,19 @@ SCALER_PATH = os.path.join("models", "iot_health_scaler.pkl")
 ENCODER_PATH = os.path.join("models", "iot_health_label_encoder.pkl")
 FEATURES_PATH = os.path.join("models", "iot_health_features.pkl")
 
-model = joblib.load(MODEL_PATH)
-scaler = joblib.load(SCALER_PATH)
-label_encoder = joblib.load(ENCODER_PATH)
-features = joblib.load(FEATURES_PATH)  # list of feature names
-FEATURE_LIST = list(features)
+try:
+    model = joblib.load(MODEL_PATH)
+    scaler = joblib.load(SCALER_PATH)
+    label_encoder = joblib.load(ENCODER_PATH)
+    features = joblib.load(FEATURES_PATH)  # list of feature names
+    FEATURE_LIST = list(features)
+    print("✅ Infra Model loaded! Expects features:", FEATURE_LIST)
+except Exception as e:
+    print(f"❌ Error loading Infra model artifacts: {e}")
+    FEATURE_LIST = []
 
-print("Model expects features:", FEATURE_LIST)
-
-@app.route("/predict", methods=["POST"])
+# UPDATED: Changed endpoint to /predict_infra
+@app.route("/predict_infra", methods=["POST"])
 def predict():
     try:
         data = request.get_json()
@@ -49,8 +53,7 @@ def predict():
         for f in FEATURE_LIST:
             if f not in data:
                 return jsonify({
-                    "error": f"Missing feature: {f}. "
-                             "Check the feature list or ensure the server clock is correct."
+                    "detail": f"Missing feature: {f}. Check the feature list or ensure the server clock is correct."
                 }), 400
             input_values.append(data[f])
 
@@ -66,18 +69,21 @@ def predict():
             proba = model.predict_proba(input_scaled).tolist()[0]
             classes = label_encoder.inverse_transform(range(len(proba))).tolist()
 
+        # UPDATED: Formatted response to perfectly match what React expects!
         return jsonify({
-            "status": prediction_class,
+            "status": "success",
+            "network_health": prediction_class,
             "probabilities": proba,
             "classes": classes
         })
 
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        # Changed "error" to "detail" so React displays the error message correctly
+        return jsonify({"detail": str(e)}), 500
 
 @app.route("/health", methods=["GET"])
 def health():
-    return jsonify({"status": "ok"})
+    return jsonify({"status": "Flask Infra API is running on Port 5000!"})
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
