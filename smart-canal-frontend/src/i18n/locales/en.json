@@ -1,5 +1,5 @@
 {
-  "appName": "CanalIQ",
+  "appName": "Canal IQ",
   "tagline": "Smart Irrigation Monitoring System",
   "login": "Sign In",
   "signingIn": "Signing in...",
@@ -27,7 +27,9 @@
     "healthyNodes": "Healthy Nodes",
     "warningNodes": "Warning Nodes",
     "criticalNodes": "Critical Nodes",
-    "latestReadings": "Latest Node Readings"
+    "latestReadings": "Latest Node Readings",
+    "chiMeaning": "Canal Health Index",
+    "cwqiMeaning": "Canal Water Quality Index"
   },
 
   "map": {

@@ -1,5 +1,5 @@
 {
-  "appName": "කැනල් IQ",
+  "appName": "Canal IQ",
   "tagline": "ස්මාර්ට් වාරිමාර්ග නිරීක්ෂණ පද්ධතිය",
   "login": "පිවිසෙන්න",
   "signingIn": "පිවිසෙමින්...",
@@ -27,7 +27,9 @@
     "healthyNodes": "සෞඛ්‍යමත් නෝඩ්",
     "warningNodes": "අවවාද නෝඩ්",
     "criticalNodes": "අවදානම් නෝඩ්",
-    "latestReadings": "නවතම මිනුම්"
+    "latestReadings": "නවතම මිනුම්",
+    "chiMeaning": "ඇළ සෞඛ්‍ය දර්ශකය (CHI)",
+    "cwqiMeaning": "ඇළ ජල තත්ත්ව දර්ශකය (CWQI)"
   },
 
   "map": {
