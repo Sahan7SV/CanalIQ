@@ -10,7 +10,7 @@ export const fetchNodeById = (id) => {
 export const fetchSeasonData = () => Promise.resolve(seasonData)
 
 export const runMLPrediction = (nodeId) => {
-  // Simulate Random Forest prediction for canal nodes
+  // Simulate Random Forest prediction
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
@@ -22,38 +22,16 @@ export const runMLPrediction = (nodeId) => {
   })
 }
 
-// ==========================================
-// REAL ML API CALL 1: SERVER INFRASTRUCTURE
-// ==========================================
+// ---------- REAL ML API CALL ----------
 export const predictInfrastructureHealth = async (inputData) => {
-  // ⚠️ CRITICAL: Pointing to Port 5000 for the Flask Server
-  const response = await fetch('http://127.0.0.1:5000/predict_infra', {
+  const response = await fetch('http://127.0.0.1:5000/predict', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(inputData),
   })
-  
   if (!response.ok) {
     const error = await response.json()
-    throw new Error(error.detail || 'Server Infra Prediction failed. Check backend.')
-  }
-  return response.json()
-}
-
-// ==========================================
-// REAL ML API CALL 2: LORA MULTI-HOP
-// ==========================================
-export const predictLoraHealth = async (inputData) => {
-  // ⚠️ CRITICAL: Pointing to Port 8000 for the FastAPI Server
-  const response = await fetch('http://127.0.0.1:8000/predict_lora', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(inputData),
-  })
-  
-  if (!response.ok) {
-    const error = await response.json()
-    throw new Error(error.detail || 'LoRa Prediction failed. Check backend.')
+    throw new Error(error.error || 'Prediction failed')
   }
   return response.json()
 }

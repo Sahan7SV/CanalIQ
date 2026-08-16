@@ -18,11 +18,12 @@ const Topbar = () => {
   const [showUserMenu, setShowUserMenu] = useState(false)
   const [showNotifications, setShowNotifications] = useState(false)
 
-  // Mock notifications (unread count based on array length)
+  // ===== UPDATED NOTIFICATIONS =====
   const [notifications, setNotifications] = useState([
-    { id: 1, text: 'Node E warning: High turbidity detected', time: '5 min ago', read: false },
-    { id: 2, text: 'Node J critical failure', time: '12 min ago', read: false },
-    { id: 3, text: 'Season report ready for download', time: '1 hour ago', read: false },
+    { id: 1, text: 'Sensor Node 01: CHI dropped below 60%', time: '5 min ago', read: false },
+    { id: 2, text: 'Transport Node A: Packet loss > 5%', time: '12 min ago', read: false },
+    { id: 3, text: 'Sensor Node 02: CWQI threshold exceeded (75%)', time: '23 min ago', read: false },
+    { id: 4, text: 'New historical data report available for download', time: '1 hour ago', read: false },
   ])
 
   const unreadCount = notifications.filter(n => !n.read).length

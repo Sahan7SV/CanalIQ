@@ -1,6 +1,6 @@
 {
-  "appName": "Canal IQ",
-  "tagline": "Smart Irrigation Monitoring System",
+  "appName": "CanalIQ",
+  "tagline": "Smart Canal Monitoring System",
   "login": "Sign In",
   "signingIn": "Signing in...",
   "username": "Username",
@@ -19,21 +19,58 @@
   },
 
   "topbar": {
-    "systemName": "Canal Monitoring System"
+    "systemName": "Canal Monitoring System",
+    "notifications": "Notifications",
+    "markAllRead": "Mark all read",
+    "noNotifications": "No notifications"
   },
 
   "dashboard": {
-    "title": "Dashboard",
+    "title": "Canal Monitoring Dashboard",
     "healthyNodes": "Healthy Nodes",
-    "warningNodes": "Warning Nodes",
-    "criticalNodes": "Critical Nodes",
+    "warningNodes": "Moderate Nodes",
+    "criticalNodes": "Poor Nodes",
     "latestReadings": "Latest Node Readings",
-    "chiMeaning": "Canal Health Index",
-    "cwqiMeaning": "Canal Water Quality Index"
+    "allNodes": "All IoT Nodes",
+    "statusDistribution": "Status Distribution",
+    "liveData": "Live Data",
+    "offline": "Offline",
+    "status": "Status",
+    "totalNodes": "Total Nodes",
+    "sensorNodes": "Sensor Nodes",
+    "transportNodes": "Transport Nodes",
+    "online": "Online",
+    "nodeDistribution": "Node Distribution",
+    "sensorHealth": "Sensor Health (CHI & CWQI)",
+    "networkHealth": "Network Health",
+    "avgMCDA": "Avg MCDA Score",
+    "sensorDetails": "Sensor Details",
+    "transportDetails": "Transport Details",
+    "updated": "Updated",
+    "waitingForData": "Waiting for data...",
+    "noConnection": "No connection"
   },
 
   "map": {
-    "title": "Canal Map"
+    "title": "Canal Map",
+    "legend": "Legend",
+    "sensorNode": "Sensor Node",
+    "transportNode": "Transport Node",
+    "baseStation": "Base Station",
+    "canalPath": "Canal Path",
+    "health": "Health",
+    "good": "Good",
+    "moderate": "Moderate",
+    "poor": "Poor",
+    "waitingForData": "Waiting for data...",
+    "offline": "Offline",
+    "live": "Live",
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "lastUpdated": "Last updated",
+    "realTime": "Real-time",
+    "interactiveMap": "Interactive Canal Map",
+    "poweredBy": "Powered by Leaflet + WebSocket"
   },
 
   "node": {
@@ -46,64 +83,119 @@
     "ph": "pH",
     "temperature": "Temperature",
     "tds": "TDS",
-    "ppm": "ppm"
+    "ppm": "ppm",
+    "rssi": "RSSI",
+    "snr": "SNR",
+    "packetLoss": "Packet Loss",
+    "health": "Health",
+    "updated": "Updated",
+    "transportInfo": "Transport Info",
+    "sensorData": "Sensor Data",
+    "canalHealth": "Canal Health",
+    "nodeId": "Node ID",
+    "type": "Type",
+    "flowRate": "Flow Rate",
+    "hopDetails": "Hop Details",
+    "globalQScore": "Global Q-Score",
+    "mcdaScore": "MCDA Score",
+    "route": "Route"
   },
 
   "status": {
     "healthy": "Healthy",
     "warning": "Warning",
-    "critical": "Critical"
+    "critical": "Critical",
+    "good": "Good",
+    "moderate": "Moderate",
+    "poor": "Poor",
+    "unknown": "Unknown"
   },
 
   "season": {
-    "title": "Seasonal Analysis: Yala vs Maha",
-    "chiByMonth": "Average CHI by Month & Season",
-    "cwqiByMonth": "Average CWQI by Month & Season",
-    "insightTitle": "Irrigation Insight",
-    "insightText": "Typical Sri Lankan seasons: Yala (May–August) is drier, resulting in lower CHI and CWQI; Maha (September–March) brings monsoon rains, improving water quality and flow. This analysis helps plan water distribution and maintenance schedules."
+    "title": "Yala vs Maha Season Analysis",
+    "subtitle": "Understand the dynamics of Sri Lanka's two main irrigation seasons.",
+    "yala": "Yala Season",
+    "maha": "Maha Season",
+    "yalaDesc": "May – August (Dry season)",
+    "mahaDesc": "September – March (Wet season)",
+    "rainfall": "Rainfall",
+    "waterFlow": "Water Flow",
+    "reservoirLevel": "Reservoir Level",
+    "cropArea": "Crop Area",
+    "monthlyRainfall": "Monthly Rainfall (mm)",
+    "monthlyWaterFlow": "Monthly Water Flow",
+    "seasonComparison": "Season Comparison",
+    "overview": "Overview",
+    "comparison": "Comparison",
+    "aboutSeasons": "About Seasons",
+    "keyCharacteristics": "Key Characteristics",
+    "managementStrategies": "Management Strategies",
+    "importanceOfPlanning": "Importance of Seasonal Planning",
+    "insightText": "Understanding the Yala and Maha seasons is crucial for farmers, water resource managers, and policymakers. The distinct rainfall patterns determine cropping cycles, reservoir storage strategies, and irrigation scheduling.",
+    "seasonalInsight": "Seasonal Insight",
+    "rainfallIncrease": "Rainfall Increase"
   },
 
   "report": {
-    "title": "Reports",
-    "description": "Generate irrigation performance reports (CHI, CWQI, sensor data) as PDF.",
-    "generateBtn": "Generate Report (Backend required)",
-    "previewTitle": "Sample Report Preview",
+    "title": "Canal Monitoring Report",
+    "description": "Generate irrigation performance reports as PDF.",
+    "generateBtn": "Download PDF Report",
+    "generating": "Generating...",
+    "previewTitle": "Report Preview",
     "node": "Node",
-    "noData": "No data available"
+    "nodeDetails": "IoT Node Details",
+    "noData": "No data available",
+    "systemHealthReport": "System Health Report",
+    "generated": "Generated",
+    "totalNodes": "Total Nodes",
+    "connected": "Connected",
+    "statusSummary": "Status Summary",
+    "totalRecords": "Total Records",
+    "sensorRecords": "Sensor Records",
+    "transportRecords": "Transport Records",
+    "avgCHI": "Avg CHI",
+    "liveNodes": "Live Nodes",
+    "historicalData": "Historical Data",
+    "clearHistory": "Clear History",
+    "exportPDF": "Export PDF",
+    "filterByNode": "Filter by Node",
+    "searchPlaceholder": "Search by Node ID, Label, or Route...",
+    "sortBy": "Sort by",
+    "time": "Time",
+    "showingRecords": "Showing records",
+    "recordsStored": "records stored"
   },
 
   "admin": {
-    "title": "Machine Learning Prediction",
-    "heroActive": "AI Prediction Engine Active",
-    "tabs": {
-      "infra": "System Infrastructure Health ML",
-      "lora": "LoRa Multi-Hop ML"
-    },
-    "referenceTitleInfra": "System Health Categories",
-    "referenceTitleLora": "LoRa Link Quality Reference",
-    "systemMetricsInfra": "System Infrastructure Metrics",
-    "systemMetricsLora": "LoRa Signal Metrics",
-    "systemMetricsDesc": "Enter current readings to diagnose system health.",
-    "predictBtn": "Run Diagnosis",
+    "title": "Infrastructure Health Prediction",
+    "referenceTitle": "Health Status Reference",
+    "systemMetrics": "Current System Metrics",
+    "predictBtn": "Predict Infrastructure Health",
     "analyzing": "Analyzing...",
-    "diagnosticError": "Diagnostic Error",
-    "diagnosticResult": "Diagnosis",
-    "systemAction": "What this means",
-    "infraClasses": {
-      "Healthy": { "label": "Healthy", "meaning": "System normal / No issues" },
-      "Slightly_Degraded": { "label": "Slightly Degraded", "meaning": "Small performance drop" },
-      "Moderate_Load": { "label": "Moderate Load", "meaning": "System under load" },
-      "High_Stress": { "label": "High Stress", "meaning": "High risk condition" },
-      "Critical_Failure": { "label": "Critical Failure", "meaning": "System near crash" }
+    "predictedStatus": "Predicted Status",
+    "classes": {
+      "Healthy": {
+        "label": "Healthy",
+        "meaning": "System normal / No issues"
+      },
+      "Slightly_Degraded": {
+        "label": "Slightly Degraded",
+        "meaning": "Small performance drop"
+      },
+      "Moderate_Load": {
+        "label": "Moderate Load",
+        "meaning": "System under load"
+      },
+      "High_Stress": {
+        "label": "High Stress",
+        "meaning": "High risk condition"
+      },
+      "Critical_Failure": {
+        "label": "Critical Failure",
+        "meaning": "System near crash"
+      }
     },
-    "loraClasses": {
-      "Excellent": { "label": "Excellent", "meaning": "Perfect transmission" },
-      "Good": { "label": "Good", "meaning": "Highly reliable" },
-      "Moderate": { "label": "Moderate", "meaning": "Signal degrading" },
-      "Bad": { "label": "Bad", "meaning": "High packet loss risk" },
-      "Unusable": { "label": "Unusable", "meaning": "Network failed / Bottlenecked" }
-    },
-    "infraFeatures": {
+    "features": {
       "cpu_usage": "CPU Usage (%)",
       "memory_usage": "Memory Usage (%)",
       "disk_usage": "Disk Usage (%)",
@@ -112,20 +204,6 @@
       "active_connections": "Active Connections",
       "error_count": "Error Count",
       "latency": "Latency (ms)"
-    },
-    "loraFeatures": {
-      "rssi_a": "Hop A: RSSI (dBm)",
-      "snr_a": "Hop A: SNR (dB)",
-      "loss_a": "Hop A: Loss (%)",
-      "rssi_b": "Hop B: RSSI (dBm)",
-      "snr_b": "Hop B: SNR (dB)",
-      "loss_b": "Hop B: Loss (%)",
-      "rssi_c": "Hop C: RSSI (dBm)",
-      "snr_c": "Hop C: SNR (dB)",
-      "loss_c": "Hop C: Loss (%)",
-      "rssi_d": "Hop D: RSSI (dBm)",
-      "snr_d": "Hop D: SNR (dB)",
-      "loss_d": "Hop D: Loss (%)"
     },
     "invalidInput": "Please enter valid numbers for all fields"
   },

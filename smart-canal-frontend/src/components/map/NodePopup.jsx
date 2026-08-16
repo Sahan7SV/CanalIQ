@@ -56,20 +56,20 @@ const NodePopup = ({ node }) => {
               <FiActivity className="text-healthy" size={14} />
               <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-200">{t('node.chi')}</h4>
             </div>
-            <span className="text-sm font-bold text-healthy">{node.chi.toFixed(2)}</span>
+            <span className="text-sm font-bold text-healthy">{node.chi?.toFixed(2) || 'N/A'}</span>
           </div>
           <div className="grid grid-cols-3 gap-1 text-xxs text-gray-600 dark:text-gray-400">
             <div className="flex items-center gap-1">
               <FiWifi size={10} />
-              <span>{t('node.turbidity')}: {node.chiComponents.turbidity}</span>
+              <span>{t('node.turbidity')}: {node.chiComponents?.turbidity || 'N/A'}</span>
             </div>
             <div className="flex items-center gap-1">
               <FiWind size={10} />
-              <span>{t('node.waterFlow')}: {node.chiComponents.waterFlow}</span>
+              <span>{t('node.waterFlow')}: {node.chiComponents?.waterFlow || 'N/A'}</span>
             </div>
             <div className="flex items-center gap-1">
               <FiActivity size={10} />
-              <span>{t('node.ultrasonic')}: {node.chiComponents.ultrasonic}</span>
+              <span>{t('node.ultrasonic')}: {node.chiComponents?.ultrasonic || 'N/A'}</span>
             </div>
           </div>
         </div>
@@ -81,20 +81,20 @@ const NodePopup = ({ node }) => {
               <FiDroplet className="text-info" size={14} />
               <h4 className="text-xs font-semibold text-gray-700 dark:text-gray-200">{t('node.cwqi')}</h4>
             </div>
-            <span className="text-sm font-bold text-info">{node.cwqi.toFixed(2)}</span>
+            <span className="text-sm font-bold text-info">{node.cwqi?.toFixed(2) || 'N/A'}</span>
           </div>
           <div className="grid grid-cols-3 gap-1 text-xxs text-gray-600 dark:text-gray-400">
             <div className="flex items-center gap-1">
               <FiDroplet size={10} />
-              <span>{t('node.ph')}: {node.cwqiComponents.ph}</span>
+              <span>{t('node.ph')}: {node.cwqiComponents?.ph || 'N/A'}</span>
             </div>
             <div className="flex items-center gap-1">
               <FiThermometer size={10} />
-              <span>{t('node.temperature')}: {node.cwqiComponents.temperature}°C</span>
+              <span>{t('node.temperature')}: {node.cwqiComponents?.temperature || 'N/A'}°C</span>
             </div>
             <div className="flex items-center gap-1">
               <FiWifi size={10} />
-              <span>{t('node.tds')}: {node.cwqiComponents.tds}</span>
+              <span>{t('node.tds')}: {node.cwqiComponents?.tds || 'N/A'}</span>
             </div>
           </div>
         </div>

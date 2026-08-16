@@ -1,6 +1,6 @@
 {
-  "appName": "Canal IQ",
-  "tagline": "ස්මාර්ට් වාරිමාර්ග නිරීක්ෂණ පද්ධතිය",
+  "appName": "CanalIQ",
+  "tagline": "ස්මාර්ට් ඇළ නිරීක්ෂණ පද්ධතිය",
   "login": "පිවිසෙන්න",
   "signingIn": "පිවිසෙමින්...",
   "username": "පරිශීලක නාමය",
@@ -15,25 +15,62 @@
     "canalMap": "ඇළ සිතියම",
     "seasonAnalysis": "වාර විශ්ලේෂණය",
     "reports": "වාර්තා",
-    "mlPredictions": "ML පුර්ව අනුමාන"
+    "mlPredictions": "යන්ත්‍ර ඉගෙනුම් පුර්ව අනුමාන"
   },
 
   "topbar": {
-    "systemName": "ඇළ නිරීක්ෂණ පද්ධතිය"
+    "systemName": "ඇළ නිරීක්ෂණ පද්ධතිය",
+    "notifications": "දැනුම්දීම්",
+    "markAllRead": "සියල්ල කියවූ ලෙස සලකුණු කරන්න",
+    "noNotifications": "දැනුම්දීම් නොමැත"
   },
 
   "dashboard": {
-    "title": "මුල් පිටුව",
+    "title": "ඇළ නිරීක්ෂණ මුල් පිටුව",
     "healthyNodes": "සෞඛ්‍යමත් නෝඩ්",
-    "warningNodes": "අවවාද නෝඩ්",
-    "criticalNodes": "අවදානම් නෝඩ්",
-    "latestReadings": "නවතම මිනුම්",
-    "chiMeaning": "ඇළ සෞඛ්‍ය දර්ශකය (CHI)",
-    "cwqiMeaning": "ඇළ ජල තත්ත්ව දර්ශකය (CWQI)"
+    "warningNodes": "මධ්‍යස්ථ නෝඩ්",
+    "criticalNodes": "දුර්වල නෝඩ්",
+    "latestReadings": "නවතම නෝඩ් කියවීම්",
+    "allNodes": "සියලුම IoT නෝඩ්",
+    "statusDistribution": "තත්ත්ව බෙදාහැරීම",
+    "liveData": "සජීවී දත්ත",
+    "offline": "නොබැඳි",
+    "status": "තත්ත්වය",
+    "totalNodes": "සම්පූර්ණ නෝඩ්",
+    "sensorNodes": "සංවේදක නෝඩ්",
+    "transportNodes": "ප්‍රවාහන නෝඩ්",
+    "online": "සබැඳි",
+    "nodeDistribution": "නෝඩ් බෙදාහැරීම",
+    "sensorHealth": "සංවේදක සෞඛ්‍යය (CHI සහ CWQI)",
+    "networkHealth": "ජාල සෞඛ්‍යය",
+    "avgMCDA": "සාමාන්‍ය MCDA ලකුණු",
+    "sensorDetails": "සංවේදක විස්තර",
+    "transportDetails": "ප්‍රවාහන විස්තර",
+    "updated": "යාවත්කාලීන කළේ",
+    "waitingForData": "දත්ත සඳහා රැඳී සිටිමින්...",
+    "noConnection": "සම්බන්ධතාවයක් නැත"
   },
 
   "map": {
-    "title": "ඇළ සිතියම"
+    "title": "ඇළ සිතියම",
+    "legend": "කථාව",
+    "sensorNode": "සංවේදක නෝඩය",
+    "transportNode": "ප්‍රවාහන නෝඩය",
+    "baseStation": "මූලස්ථානය",
+    "canalPath": "ඇළ මාර්ගය",
+    "health": "සෞඛ්‍ය තත්ත්වය",
+    "good": "හොඳයි",
+    "moderate": "මධ්‍යස්ථ",
+    "poor": "දුර්වල",
+    "waitingForData": "දත්ත සඳහා රැඳී සිටිමින්...",
+    "offline": "නොබැඳි",
+    "live": "සජීවී",
+    "connected": "සම්බන්ධයි",
+    "disconnected": "විසන්ධි විය",
+    "lastUpdated": "අවසන් යාවත්කාලීනය",
+    "realTime": "සජීවී",
+    "interactiveMap": "අන්තර්ක්‍රියාකාරී ඇළ සිතියම",
+    "poweredBy": "Leaflet + WebSocket මගින් බල ගැන්වේ"
   },
 
   "node": {
@@ -46,64 +83,119 @@
     "ph": "pH අගය",
     "temperature": "උෂ්ණත්වය",
     "tds": "TDS",
-    "ppm": "ppm"
+    "ppm": "ppm",
+    "rssi": "RSSI",
+    "snr": "SNR",
+    "packetLoss": "පැකට් අලාභය",
+    "health": "සෞඛ්‍ය තත්ත්වය",
+    "updated": "යාවත්කාලීන කළේ",
+    "transportInfo": "ප්‍රවාහන තොරතුරු",
+    "sensorData": "සංවේදක දත්ත",
+    "canalHealth": "ඇළ සෞඛ්‍යය",
+    "nodeId": "නෝඩ් අංකය",
+    "type": "වර්ගය",
+    "flowRate": "ප්‍රවාහ අනුපාතය",
+    "hopDetails": "පියවර තොරතුරු",
+    "globalQScore": "ගෝලීය Q-ලකුණු",
+    "mcdaScore": "MCDA ලකුණු",
+    "route": "මාර්ගය"
   },
 
   "status": {
     "healthy": "සෞඛ්‍යමත්",
     "warning": "අවවාද",
-    "critical": "අවදානම්"
+    "critical": "අවදානම්",
+    "good": "හොඳයි",
+    "moderate": "මධ්‍යස්ථ",
+    "poor": "දුර්වල",
+    "unknown": "නොදනී"
   },
 
   "season": {
-    "title": "වාර විශ්ලේෂණය: යල සහ මහ",
-    "chiByMonth": "මාසික සාමාන්‍ය CHI",
-    "cwqiByMonth": "මාසික සාමාන්‍ය CWQI",
-    "insightTitle": "ජල සම්පාදන තොරතුරු",
-    "insightText": "සාමාන්‍ය ශ්‍රී ලාංකීය වාර: යල (මැයි–අගෝස්තු) වියළි වන අතර එමඟින් CHI හා CWQI අඩු වේ; මහ (සැප්තැම්බර්–මාර්තු) මෝසම් වැසි ගෙනෙයි, ජලයේ ගුණාත්මකභාවය හා ගලායාම වැඩි දියුණු කරයි. මෙම විශ්ලේෂණය ජල බෙදාහැරීම හා නඩත්තු කාලසටහන් සැලසුම් කිරීමට උපකාරී වේ."
+    "title": "යල සහ මහ වාර විශ්ලේෂණය",
+    "subtitle": "ශ්‍රී ලංකාවේ ප්‍රධාන වාරිමාර්ග වාර දෙකෙහි ගතිකත්වය අවබෝධ කර ගන්න.",
+    "yala": "යල වාරය",
+    "maha": "මහ වාරය",
+    "yalaDesc": "මැයි – අගෝස්තු (වියළි වාරය)",
+    "mahaDesc": "සැප්තැම්බර් – මාර්තු (තෙත් වාරය)",
+    "rainfall": "වර්ෂාපතනය",
+    "waterFlow": "ජල ප්‍රවාහය",
+    "reservoirLevel": "ජලාශ මට්ටම",
+    "cropArea": "වගා භූමි ප්‍රමාණය",
+    "monthlyRainfall": "මාසික වර්ෂාපතනය (mm)",
+    "monthlyWaterFlow": "මාසික ජල ප්‍රවාහය",
+    "seasonComparison": "වාර සංසන්දනය",
+    "overview": "දළ විශ්ලේෂණය",
+    "comparison": "සංසන්දනය",
+    "aboutSeasons": "වාර පිළිබඳ",
+    "keyCharacteristics": "ප්‍රධාන ලක්ෂණ",
+    "managementStrategies": "කළමනාකරණ උපාය මාර්ග",
+    "importanceOfPlanning": "වාර සැලසුම්කරණයේ වැදගත්කම",
+    "insightText": "යල සහ මහ වාර අවබෝධ කර ගැනීම ගොවීන්ට, ජල සම්පත් කළමනාකරුවන්ට සහ ප්‍රතිපත්ති සම්පාදකයින්ට ඉතා වැදගත් වේ. විවිධ වර්ෂාපතන රටා මගින් බෝග චක්‍ර, ජලාශ ගබඩා උපාය මාර්ග සහ වාරිමාර්ග කාලසටහන් තීරණය වේ.",
+    "seasonalInsight": "වාර තීක්ෂණ බුද්ධිය",
+    "rainfallIncrease": "වර්ෂාපතන වැඩිවීම"
   },
 
   "report": {
-    "title": "වාර්තා",
-    "description": "ජල සම්පාදන කාර්ය සාධන වාර්තා (CHI, CWQI, සංවේදක දත්ත) PDF ලෙස උත්පාදනය කරන්න.",
-    "generateBtn": "වාර්තාව උත්පාදනය කරන්න (Backend අවශ්‍යයි)",
-    "previewTitle": "ආදර්ශ වාර්තා පෙරදසුන",
+    "title": "ඇළ නිරීක්ෂණ වාර්තාව",
+    "description": "වාරිමාර්ග කාර්ය සාධන වාර්තා PDF ලෙස උත්පාදනය කරන්න.",
+    "generateBtn": "PDF වාර්තාව බාගන්න",
+    "generating": "සකසමින්...",
+    "previewTitle": "වාර්තා පෙරදසුන",
     "node": "නෝඩය",
-    "noData": "දත්ත නොමැත"
+    "nodeDetails": "IoT නෝඩ් විස්තර",
+    "noData": "දත්ත නොමැත",
+    "systemHealthReport": "පද්ධති සෞඛ්‍ය වාර්තාව",
+    "generated": "සකසන ලදී",
+    "totalNodes": "සම්පූර්ණ නෝඩ්",
+    "connected": "සම්බන්ධයි",
+    "statusSummary": "තත්ත්ව සාරාංශය",
+    "totalRecords": "සම්පූර්ණ වාර්තා",
+    "sensorRecords": "සංවේදක වාර්තා",
+    "transportRecords": "ප්‍රවාහන වාර්තා",
+    "avgCHI": "සාමාන්‍ය CHI",
+    "liveNodes": "සජීවී නෝඩ්",
+    "historicalData": "ඓතිහාසික දත්ත",
+    "clearHistory": "ඉතිහාසය මකන්න",
+    "exportPDF": "PDF අපනයනය කරන්න",
+    "filterByNode": "නෝඩය අනුව පෙරහන් කරන්න",
+    "searchPlaceholder": "නෝඩ් අංකය, නාමය හෝ මාර්ගය අනුව සොයන්න...",
+    "sortBy": "අනුපිළිවෙලට සකසන්න",
+    "time": "වේලාව",
+    "showingRecords": "වාර්තා පෙන්වයි",
+    "recordsStored": "වාර්තා ගබඩා කර ඇත"
   },
 
   "admin": {
-    "title": "යන්ත්‍ර ඉගෙනුම් පුරෝකථනය",
-    "heroActive": "AI පුරෝකථන එන්ජිම සක්‍රියයි",
-    "tabs": {
-      "infra": "පද්ධති යටිතල සෞඛ්‍ය ML",
-      "lora": "LoRa බහු-හොප් ML"
-    },
-    "referenceTitleInfra": "පද්ධති සෞඛ්‍ය කාණ්ඩ",
-    "referenceTitleLora": "LoRa සබැඳුම් තත්ත්ව යොමුව",
-    "systemMetricsInfra": "පද්ධති යටිතල මිනුම්",
-    "systemMetricsLora": "LoRa සංඥා මිනුම්",
-    "systemMetricsDesc": "පද්ධති සෞඛ්‍යය නිර්ණය කිරීමට වත්මන් කියවීම් ඇතුළත් කරන්න.",
-    "predictBtn": "රෝග විනිශ්චය ක්‍රියාත්මක කරන්න",
+    "title": "යටිතල පහසුකම් සෞඛ්‍ය පුර්ව අනුමානය",
+    "referenceTitle": "සෞඛ්‍ය තත්ත්ව යොමුව",
+    "systemMetrics": "වත්මන් පද්ධති මිනුම්",
+    "predictBtn": "යටිතල සෞඛ්‍ය පුරෝකථනය කරන්න",
     "analyzing": "විශ්ලේෂණය කරමින්...",
-    "diagnosticError": "රෝග විනිශ්චය දෝෂය",
-    "diagnosticResult": "රෝග විනිශ්චය",
-    "systemAction": "මෙයින් අදහස් කරන්නේ කුමක්ද",
-    "infraClasses": {
-      "Healthy": { "label": "සෞඛ්‍යමත්", "meaning": "පද්ධතිය සාමාන්‍ය / ගැටළු නොමැත" },
-      "Slightly_Degraded": { "label": "සුළු පිරිහීම", "meaning": "කුඩා කාර්ය සාධන පහත වැටීමක්" },
-      "Moderate_Load": { "label": "මධ්‍යම බර පැටවීම", "meaning": "පද්ධතිය බර යටතේ" },
-      "High_Stress": { "label": "අධික ආතතිය", "meaning": "ඉහළ අවදානම් තත්වයක්" },
-      "Critical_Failure": { "label": "බරපතල අසමත්වීම", "meaning": "පද්ධතිය ඇඳ වැටීමට ආසන්නයි" }
+    "predictedStatus": "පුරෝකථිත තත්ත්වය",
+    "classes": {
+      "Healthy": {
+        "label": "සෞඛ්‍යමත්",
+        "meaning": "පද්ධතිය සාමාන්‍ය / ගැටළු නොමැත"
+      },
+      "Slightly_Degraded": {
+        "label": "සුළු පිරිහීම",
+        "meaning": "කුඩා කාර්ය සාධන පහත වැටීමක්"
+      },
+      "Moderate_Load": {
+        "label": "මධ්‍යම බර පැටවීම",
+        "meaning": "පද්ධතිය බර යටතේ"
+      },
+      "High_Stress": {
+        "label": "අධික ආතතිය",
+        "meaning": "ඉහළ අවදානම් තත්වයක්"
+      },
+      "Critical_Failure": {
+        "label": "බරපතල අසමත්වීම",
+        "meaning": "පද්ධතිය ඇඳ වැටීමට ආසන්නයි"
+      }
     },
-    "loraClasses": {
-      "Excellent": { "label": "විශිෂ්ටයි", "meaning": "පරිපූර්ණ සම්ප්‍රේෂණය" },
-      "Good": { "label": "හොඳයි", "meaning": "ඉහළ විශ්වසනීයත්වයක්" },
-      "Moderate": { "label": "මධ්‍යස්ථයි", "meaning": "සංඥා පිරිහීමක්" },
-      "Bad": { "label": "නරකයි", "meaning": "ඉහළ පැකට් අලාභ අවදානමක්" },
-      "Unusable": { "label": "භාවිතයට නුසුදුසුයි", "meaning": "ජාලය අසමත් විය / බාධාවකි" }
-    },
-    "infraFeatures": {
+    "features": {
       "cpu_usage": "CPU භාවිතය (%)",
       "memory_usage": "මතක භාවිතය (%)",
       "disk_usage": "තැටි භාවිතය (%)",
@@ -112,20 +204,6 @@
       "active_connections": "සක්‍රිය සම්බන්ධතා",
       "error_count": "දෝෂ ගණන",
       "latency": "ප්‍රමාදය (ms)"
-    },
-    "loraFeatures": {
-      "rssi_a": "හොප් A: RSSI (dBm)",
-      "snr_a": "හොප් A: SNR (dB)",
-      "loss_a": "හොප් A: අලාභය (%)",
-      "rssi_b": "හොප් B: RSSI (dBm)",
-      "snr_b": "හොප් B: SNR (dB)",
-      "loss_b": "හොප් B: අලාභය (%)",
-      "rssi_c": "හොප් C: RSSI (dBm)",
-      "snr_c": "හොප් C: SNR (dB)",
-      "loss_c": "හොප් C: අලාභය (%)",
-      "rssi_d": "හොප් D: RSSI (dBm)",
-      "snr_d": "හොප් D: SNR (dB)",
-      "loss_d": "හොප් D: අලාභය (%)"
     },
     "invalidInput": "කරුණාකර සියලු ක්ෂේත්‍ර සඳහා වලංගු අංක ඇතුළත් කරන්න"
   },

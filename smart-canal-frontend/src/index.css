@@ -5,30 +5,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ============================================================
+   BASE LAYOUT - DARK / LIGHT MODE SUPPORT
+   ============================================================ */
 @layer base {
   html {
     font-family: 'Inter', 'Noto Sans Sinhala', ui-sans-serif, system-ui, sans-serif;
   }
   body {
-    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300;
+    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300;
   }
-  /* Subtle background pattern (light/dark) */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  }
-  body.dark::before {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* Smooth transition for theme switching */
+  * {
+    @apply transition-colors duration-200;
   }
 }
 
-/* Glassmorphism upgraded */
+/* ============================================================
+   SCROLLBAR - DARK / LIGHT
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================================
+   GLASSMORPHISM - DARK / LIGHT
+   ============================================================ */
 .glass {
   background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(12px) saturate(180%);
@@ -39,6 +52,7 @@
   background: rgba(17, 25, 40, 0.75);
   border-color: rgba(255, 255, 255, 0.1);
 }
+
 .glass-strong {
   background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(16px) saturate(200%);
@@ -50,8 +64,264 @@
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.2); border-radius: 3px; }
-.dark ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); }
+/* ============================================================
+   LEAFET MAP - DARK / LIGHT
+   ============================================================ */
+.leaflet-container {
+  @apply bg-slate-100 dark:bg-slate-800;
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.leaflet-control-zoom a {
+  @apply bg-white text-slate-800 dark:bg-gray-800 dark:text-white !important;
+  border: none !important;
+}
+.leaflet-control-zoom a:hover {
+  @apply bg-slate-100 dark:bg-gray-700 !important;
+}
+
+/* ============================================================
+   CUSTOM MARKER ANIMATION
+   ============================================================ */
+.custom-marker {
+  transition: all 0.3s ease;
+}
+.custom-marker:hover {
+  transform: scale(1.1);
+}
+
+/* ============================================================
+   MAP POPUP - DARK / LIGHT
+   ============================================================ */
+.custom-popup .leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+.custom-popup .leaflet-popup-tip {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  @apply bg-white dark:bg-gray-800;
+}
+
+/* Enhanced Popup for MapView */
+.enhanced-popup-wrapper .leaflet-popup-content-wrapper {
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+.enhanced-popup-wrapper .leaflet-popup-tip {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  @apply bg-white dark:bg-gray-800;
+}
+
+.popup-content {
+  min-width: 260px;
+  max-width: 320px;
+  padding: 14px 16px 16px 16px;
+  @apply bg-white dark:bg-gray-800;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.enhanced-popup {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.popup-content h3 {
+  @apply text-slate-800 dark:text-white;
+  border-bottom: 2px solid #2563eb;
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.popup-content .health-badge {
+  display: inline-block;
+  padding: 2px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.popup-content .health-badge.good {
+  @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400;
+}
+.popup-content .health-badge.moderate {
+  @apply bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400;
+}
+.popup-content .health-badge.poor {
+  @apply bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400;
+}
+
+/* ============================================================
+   REACT-LEAFLET OVERRIDES FOR DARK MODE
+   ============================================================ */
+.leaflet-popup-content {
+  @apply text-slate-800 dark:text-gray-200;
+}
+
+/* ============================================================
+   TABLE STYLES - DARK / LIGHT
+   ============================================================ */
+.table-container {
+  @apply bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700;
+}
+
+.table-container thead {
+  @apply bg-slate-50 dark:bg-gray-700/50 border-b border-slate-200 dark:border-gray-700;
+}
+
+.table-container tbody tr {
+  @apply border-b border-slate-100 dark:border-gray-700/50 hover:bg-slate-50 dark:hover:bg-gray-700/30;
+}
+
+/* ============================================================
+   CARD STYLES - DARK / LIGHT
+   ============================================================ */
+.card {
+  @apply bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 shadow-sm;
+}
+
+/* ============================================================
+   STATUS COLORS - DARK / LIGHT (keep consistent)
+   ============================================================ */
+.status-healthy {
+  @apply text-emerald-600 dark:text-emerald-400;
+}
+.status-moderate {
+  @apply text-amber-600 dark:text-amber-400;
+}
+.status-poor {
+  @apply text-red-600 dark:text-red-400;
+}
+.status-unknown {
+  @apply text-slate-400 dark:text-slate-500;
+}
+
+/* ============================================================
+   CHART CONTAINER - DARK / LIGHT
+   ============================================================ */
+.recharts-wrapper .recharts-cartesian-grid-horizontal line,
+.recharts-wrapper .recharts-cartesian-grid-vertical line {
+  @apply stroke-slate-200 dark:stroke-gray-700;
+}
+
+.recharts-wrapper .recharts-text {
+  @apply fill-slate-600 dark:fill-gray-400;
+}
+
+.recharts-wrapper .recharts-legend-item-text {
+  @apply text-slate-700 dark:text-gray-300 !important;
+}
+
+/* ============================================================
+   TOOLTIP - DARK / LIGHT
+   ============================================================ */
+.recharts-tooltip-wrapper {
+  @apply bg-white dark:bg-gray-800 border border-slate-200 dark:border-gray-700 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ============================================================
+   INPUT FIELDS - DARK / LIGHT
+   ============================================================ */
+input, select, textarea {
+  @apply bg-white dark:bg-gray-800 text-slate-900 dark:text-white border-slate-200 dark:border-gray-700;
+}
+
+input:focus, select:focus, textarea:focus {
+  @apply ring-2 ring-blue-500 border-transparent;
+}
+
+/* ============================================================
+   BUTTONS - DARK / LIGHT
+   ============================================================ */
+.btn-primary {
+  @apply bg-blue-600 hover:bg-blue-700 text-white dark:bg-blue-500 dark:hover:bg-blue-600;
+}
+
+.btn-secondary {
+  @apply bg-slate-200 hover:bg-slate-300 text-slate-800 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200;
+}
+
+.btn-danger {
+  @apply bg-red-600 hover:bg-red-700 text-white dark:bg-red-500 dark:hover:bg-red-600;
+}
+
+/* ============================================================
+   SELECT DROPDOWN - DARK / LIGHT
+   ============================================================ */
+select option {
+  @apply bg-white dark:bg-gray-800 text-slate-900 dark:text-white;
+}
+
+/* ============================================================
+   MODAL / OVERLAY - DARK / LIGHT
+   ============================================================ */
+.overlay {
+  @apply bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm;
+}
+
+/* ============================================================
+   DIVIDER - DARK / LIGHT
+   ============================================================ */
+.divider {
+  @apply border-slate-200 dark:border-gray-700;
+}
+
+/* ============================================================
+   TEXT COLORS - DARK / LIGHT
+   ============================================================ */
+.text-muted {
+  @apply text-slate-500 dark:text-gray-400;
+}
+
+.text-heading {
+  @apply text-slate-900 dark:text-white;
+}
+
+.text-body {
+  @apply text-slate-700 dark:text-gray-300;
+}
+
+/* ============================================================
+   BACKGROUNDS - DARK / LIGHT
+   ============================================================ */
+.bg-subtle {
+  @apply bg-slate-50 dark:bg-gray-800/50;
+}
+
+.bg-card {
+  @apply bg-white dark:bg-gray-800;
+}
+
+.bg-sidebar {
+  @apply bg-white dark:bg-gray-900/95;
+}
+
+/* ============================================================
+   BORDER - DARK / LIGHT
+   ============================================================ */
+.border-subtle {
+  @apply border-slate-200 dark:border-gray-700;
+}
+
+/* ============================================================
+   SHADOWS - DARK / LIGHT
+   ============================================================ */
+.shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+.dark .shadow-soft {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
